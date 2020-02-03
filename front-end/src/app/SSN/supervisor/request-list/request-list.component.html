@@ -1,0 +1,73 @@
+
+<app-header></app-header>
+<header>
+  <div class="panel-heading">
+   <h2>Incoming Request</h2>
+</div>
+<nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+      <li class="badge badge-info" ><a>Email :-</a></li>
+    </ul>
+   
+  </div>
+</nav>
+
+<div>
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    
+
+</div>
+</header>
+
+<body>
+<div class="panel panel-primary">
+  
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Approvel Id</th>
+          <th>Req Id</th>
+          <th>Req No</th>
+          <th>createdon</th>
+          <th>approvaldate</th>
+          <th>status</th>
+          <th>approval Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let approvelHisytory of approvelHisytories">
+          <td>{{approvelHisytory.approvalhistoryid}}</td>
+          <td>{{approvelHisytory.requestmasterid}}</td>
+          <td>{{approvelHisytory.requestnumber}}</td>
+          <td>{{approvelHisytory.createdon}}</td>
+          <td>{{approvelHisytory.approvaldate}}</td>
+          <td>{{approvelHisytory.status}}</td>
+          <td>{{approvelHisytory.approvalstatus}}</td>
+        
+          <td><button (click)="rejectDriver(approvelHisytory.approvalhistoryid)" class="a1">Reject</button>
+              <button (click)="ApprovelDetails(approvelHisytory.approvalhistoryid)" class="b1">Edit</button>
+              <button (click)="deleteDriver(approvelHisytory.approvalhistoryid)" class="a1">Approved</button>
+            
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>

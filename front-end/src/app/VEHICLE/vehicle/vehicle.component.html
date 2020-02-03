@@ -1,0 +1,53 @@
+
+<app-header></app-header>
+<header><h3>Add Vehicle</h3></header>
+
+
+<body>
+
+  <nav  class="navbar navbar-inverse">
+    <div class="container-fluid">
+  
+
+<div [hidden]="submitted" style="width: 400px;">
+
+  <form (ngSubmit)="registerVehicle()">
+
+    
+    <div class="form-group ">
+      <label for="name">vehicletypeid</label>
+      <input type="text" class="form-control" id="vehicletypeid" required [(ngModel)]="vehicle.vehicletypeid" name="vehicletypeid">
+    </div>
+
+    <div class="form-group">
+      <label for="name">vehicleno</label>
+      <input type="text" class="form-control" id="vehicleno" required [(ngModel)]="vehicle.vehicleno" name="vehicleno">
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="name">vehiclemodel</label>
+      <input type="text" class="form-control" id="vehiclemodel" required [(ngModel)]="vehicle.vehiclemodel" name="vehiclemodel">
+    </div>
+
+    <div class="form-group">
+      <label for="name">vehicledesc</label>
+      <input type="text" class="form-control" id="vehicledesc" required [(ngModel)]="vehicle.vehicledesc" name="vehicledesc">
+    </div>
+   
+
+   
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+
+</div>
+</div>
+</nav>
+
+<div [hidden]="!submitted">
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+ </body>

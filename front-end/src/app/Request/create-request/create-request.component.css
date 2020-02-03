@@ -1,0 +1,9 @@
+body{
+    background-color: darkturquoise;
+}
+header{
+    background-color: rgb(143, 218, 228);
+}
+.btn btn-success{
+    color: rgb(191, 218, 72);
+}

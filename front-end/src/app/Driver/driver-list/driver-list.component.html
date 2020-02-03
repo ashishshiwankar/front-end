@@ -1,0 +1,71 @@
+
+<app-header></app-header>
+<header>
+  <div class="panel-heading">
+   <h2>Driver List's</h2>
+</div>
+<nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+      <li class="badge badge-info" ><a>Email :-</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><button   routerLink="/addDriver" class="dropdown"> Add Driver's </button></li>
+    </ul>
+  </div>
+</nav>
+
+<div>
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    
+
+</div>
+</header>
+
+<body>
+<div class="panel panel-primary">
+  
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Conatct</th>
+          <th>Licence No</th>
+          <th>Password</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let driver of drivers | async">
+          <td>{{driver.firstName}}</td>
+          <td>{{driver.lastName}}</td>
+          <td>{{driver.email}}</td>
+          <td>{{driver.contact}}</td>
+          <td>{{driver.licence}}</td>
+          <td>{{driver.password}}</td>
+          <td><button (click)="deleteDriver(driver.id)" class="a1">Delete</button>
+              <button (click)="driverDetails(driver.id)" class="b1">Details</button>
+              <button (click)="updateDetails(driver.id)" class="c1">Update</button>
+              
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>

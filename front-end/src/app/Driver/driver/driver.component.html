@@ -1,0 +1,66 @@
+
+<app-header></app-header>
+<header><h3>Add Driver</h3></header>
+
+
+<body>
+
+  <nav  class="navbar navbar-inverse">
+    <div class="container-fluid">
+  
+
+<div [hidden]="submitted" style="width: 400px;">
+
+  <form (ngSubmit)="registerDriver()">
+
+    
+    <div class="form-group ">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="driver.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="driver.lastName" name="lastName">
+    </div>
+
+
+
+    <div class="form-group" >
+      <label for="name">Email</label>
+      <input type="text" class="form-control"  id="email" required [(ngModel)]="driver.email" name="email">
+    </div>
+
+
+    <div class="form-group">
+      <label for="name">UserName</label>
+      <input type="text" class="form-control" id="username" required [(ngModel)]="driver.username" name="username">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Contact</label>
+      <input type="text" class="form-control" id="contact" required [(ngModel)]="driver.contact" name="contact">
+    </div>
+    
+    <div class="form-group">
+      <label for="name">licence</label>
+      <input type="text" class="form-control" id="licence" required [(ngModel)]="driver.licence" name="licence">
+    </div>
+
+    <div class="form-group">
+      <label for="psssword">Password</label>
+      <input type="text" class="form-control" id="password" required [(ngModel)]="driver.password" name="password">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+
+</div>
+</div>
+</nav>
+
+<div [hidden]="!submitted">
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+ </body>

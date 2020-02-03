@@ -1,0 +1,64 @@
+
+
+<app-header></app-header>
+<header>
+  <div class="panel-heading">
+   <h2>Zone List</h2>
+</div>
+
+<nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+      <li class="badge badge-info" ><a>Email :-</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><button   routerLink="/createZone" class="dropdown"> create Zone's </button></li>
+    </ul>
+  </div>
+</nav>
+<div>
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    
+
+</div>
+</header>
+
+<body>
+<div class="panel panel-primary">
+  
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>zone id </th>
+          <th>zone No</th>
+          <th>zone Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let zone of zones | async">
+          <td>{{zone.id}}</td>
+          <td>{{zone.zoneNo}}</td>
+          <td>{{zone.zonename}}</td>
+          <td><button (click)="updatezone(zone.id)" class="a1">Edit</button>
+              <button (click)="deleteZone(zone.id)" class="a1">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>

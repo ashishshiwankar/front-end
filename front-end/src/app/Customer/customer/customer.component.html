@@ -1,0 +1,96 @@
+
+<app-header></app-header>
+<header><h3>Registration</h3></header>
+
+
+<body>
+
+  <nav  class="navbar navbar-inverse">
+    <div class="container-fluid">
+  
+
+<div [hidden]="submitted" style="width: 400px;">
+
+  <form (ngSubmit)="registerCust()">
+
+    
+    <div class="form-group ">
+      <label for="custname">custname</label>
+      <input type="text" class="form-control" id="custname" required [(ngModel)]="customer.custname" name="custname">
+    </div>
+
+    <div class="form-group">
+      <label for="custemail">Email</label>
+      <input type="text" class="form-control" id="custemail" required [(ngModel)]="customer.custemail" name="custemail">
+    </div>
+
+
+
+    <div class="form-group" >
+      <label for="custpassword">custpassword</label>
+      <input type="text" class="form-control"  id="custpassword" required [(ngModel)]="customer.custpassword" name="custpassword">
+    </div>
+
+
+    <div class="form-group">
+      <label for="custaddress">custaddress</label>
+      <input type="text" class="form-control" id="custaddress" required [(ngModel)]="customer.custaddress" name="custaddress">
+    </div>
+
+ 
+
+
+    
+    <div class="form-group">
+      <label for="gender" class="a1">gender</label>
+      <div class="col-sm-25">
+              <select class="form-control" id="gender"  required [(ngModel)]="customer.gender" name="gender">
+                <option value="">select gender</option>
+                <option value="1">male</option>
+              <option value="2">female</option>
+             
+            </select>
+            
+    </div>
+   </div>
+    
+
+    <div class="form-group">
+      <label for="custmoblieno">custmoblieno</label>
+      <input type="text" class="form-control" id="custmoblieno" required [(ngModel)]="customer.custmoblieno" name="custmoblieno">
+    </div>
+
+    <div class="form-group">
+      <label for="custzone" class="a1">custzone</label>
+      <div class="col-sm-25">
+              <select class="form-control" id="custzone"  required [(ngModel)]="customer.custzone" name="custzone">
+                <option value="">select group</option>
+                <option value="1">zone1</option>
+              <option value="2">zone2</option>
+              <option value="3">zone3</option>
+              <option value="4">zone4</option>
+              <option value="1">zone5</option>
+              <option value="2">zone6</option>
+              <option value="3">zone7</option>
+              <option value="4">zone8</option>
+            </select>
+            
+    </div>
+   </div>
+
+
+
+  
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+
+</div>
+</div>
+</nav>
+
+<div [hidden]="!submitted">
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+ </body>

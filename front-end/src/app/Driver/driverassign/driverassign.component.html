@@ -1,0 +1,66 @@
+
+<header>
+        <h3>
+                Asssign Driver
+        </h3>
+</header>
+<body>
+
+
+<div class="container">
+        <br>
+        <form class="form-horizontal shadow p-3 mb-5 bg-white rounded" #f="ngForm"
+                (ngSubmit)="onSubmit()">
+                <div class="row">
+            
+                        <div class="col-6">
+                               
+
+          <div class="form-group">
+                 <label for="name" class="a1">vehicleno</label>
+                <input type="text" class="form-control" id="vehicleno" required [(ngModel)]="vehicle.vehicleno" name="vehicleno">
+        </div>
+
+
+
+     
+
+///
+
+
+<div class="form-group">
+        <label for="name" class="a1">driverid</label>
+          <input type="text" class="form-control" id="driverid" required [(ngModel)]="vehicle.driverid" name="driverid">
+      </div>
+     
+     
+      
+      
+     
+      <div class="form-group">
+             <label for="name" class="a1">driverName</label>
+       
+       <select class="form-control custom-select"  id="driverid" required [(ngModel)]="vehicle.driverid" name="driverid">
+         <option value="" selected>select</option>
+         <option *ngFor="let driver of drivers" value="{{driver.id}}">{{driver.firstName}} {{driver.lastName}}</option>
+       </select>
+     </div>
+
+
+    
+
+
+
+                              
+                             
+                        </div>
+                    
+                </div>
+                <div class="row">
+                        <div class="col-6">
+                                <input type="submit" class=" btn btn-secondary" value="Assign">
+                        </div>
+                </div>
+        </form>
+</div>
+</body>

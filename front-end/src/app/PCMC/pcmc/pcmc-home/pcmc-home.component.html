@@ -1,0 +1,226 @@
+
+
+<header>
+
+  <nav  class="navbar navbar-inverse">
+    <div class="container-fluid">
+  
+      <ul class="nav navbar-nav" *ngIf="isLoggedIn">
+        <li class="badge badge-info" > <a href="/signiii" class="nav-link" routerLink="profile">{{ username }}</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">LogOut</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+</header>
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <div class="row page-titles">
+      <div class="col-md-5 align-self-center">
+        <h4 class="text-themecolor">Dashboard</h4>
+      </div>
+      <div class="col-md-7 align-self-center text-right">
+        <div class="d-flex justify-content-end align-items-center">
+          <ol class="breadcrumb">
+            <button (click)="approvelDetails(approvelHisytory.supervisorid)" class="c1">Update</button>
+            <button  class="breadcrumb-item active"><a class="" (click)="approvelDetails(currentUser.email)">Dashboard</a></button>
+            <td>
+              <button (click)="driverDetails(driver.id)" class="b1">Details {{ currentUser.email }}</button>
+              <button (click)="approvelDetails(currentUser.email)" class="c1">UpdateReal</button>
+              
+          </td>
+
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body" *ngIf="isImplementer=='no'">
+            <div class="row">
+              <!-- Column -->
+              <div class="col-md-6 col-lg-3 col-xlg-3 privilegeRequestCountDiv">
+                <div class="card">
+                  <div class="box bg-info text-center">
+                    <h1 class="font-light text-white"></h1>
+                    <h6 class="text-white privilegeRequestCountLabel">Total Provisioning Requests</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 col-xlg-3 privilegeRequestCountDiv">
+                <div class="card">
+                  <div class="box circle-implemented text-center">
+                    <h1 class="font-light text-white"></h1>
+                    <h6 class="text-white privilegeRequestCountLabel">Implemented Provisioning Requests</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 col-xlg-3 privilegeRequestCountDiv">
+                <div class="card">
+                  <div class="box bg-dark text-center">
+                    <h1 class="font-light text-white"></h1>
+                    <h6 class="text-white privilegeRequestCountLabel">Pending Provisioning Requests</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 col-xlg-3 privilegeRequestCountDiv">
+                <div class="card">
+                  <div class="box bg-success text-center">
+                    <h1 class="font-light text-white"></h1>
+                    <h6 class="text-white privilegeRequestCountLabel">Approved Provisioning Requests</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 col-xlg-3 privilegeRequestCountDiv">
+                <div class="card">
+                  <div class="box bg-dangour text-center">
+                    <h1 class="font-light text-white"></h1>
+                    <h6 class="text-white privilegeRequestCountLabel">Declined Provisioning Requests</h6>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card-body" *ngIf="isImplementer=='yes'">
+            <div class="row">
+
+              <div class="col-md-6 col-lg-3 col-xlg-3 implPrivilegeRequestCountDiv">
+                <div class="card">
+                  <div class="box bg-info text-center">
+                    <h1 class="font-light text-white"></h1>
+                    <h6 class="text-white privilegeRequestCountLabel">Total Provisioning & De-Provisioning
+                      Requests</h6>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 col-xlg-3 implprivilegeRequestCountDiv">
+                <a [routerLink]="['/approveAccessRequests']">
+                  <div class="card">
+                    <div class="box bg-success text-center">
+                      <h1 class="font-light text-white"></h1>
+                      <h6 class="text-white privilegeRequestCountLabel">Approved Provisioning
+                        Requests</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-3 col-xlg-3 implprivilegeRequestCountDiv">
+                <a [routerLink]="['/implAccessRequests']">
+                  <div class="card">
+                    <div class="box circle-implemented text-center">
+                      <h1 class="font-light text-white"></h1>
+                      <h6 class="text-white privilegeRequestCountLabel">Total Implemented
+                        Requests</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-lg-3 col-xlg-3 implprivilegeRequestCountDiv">
+                <a [routerLink]="['/implementerRemovePrivilegeRequest']">
+                  <div class="card">
+                    <div class="box bg-dark text-center">
+                      <h1 class="font-light text-white"></h1>
+                      <h6 class="text-white privilegeRequestCountLabel">Pending De-Provisioning
+                        Requests</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="chart-div-date">
+                <input class="form-control input-daterange-datepicker" type="text" name="daterange"
+                       [(ngModel)]="dateRange"/>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+            
+
+
+              <div class="container" *ngIf="currentUser; else loggedOut">
+                <header class="jumbotron">
+                  <h3>
+                    <strong>{{ currentUser.username }}</strong> Profile
+                  </h3>
+                </header>
+                <p>
+                  <strong>Token:</strong>
+                  {{ currentUser.accessToken.substring(0, 20) }} ...
+                  {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
+                </p>
+                <p>
+                  <strong>Email:</strong>
+                  {{ currentUser.email }}
+                </p>
+                <p>
+                  <strong>id:</strong>
+                  {{ currentUser.id }}
+                </p>
+                <p>
+                  <strong>userid:</strong>
+                  {{ currentUser.userid }}
+                </p>
+                <strong>Roles:</strong>
+                <ul>
+                  <li *ngFor="let role of currentUser.roles">
+                    {{ role }}
+                  </li>
+                </ul>
+              </div>
+              
+              <ng-template #loggedOut>
+                Please login.
+              </ng-template>
+            
+
+           
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+

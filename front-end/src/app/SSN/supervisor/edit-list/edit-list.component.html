@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<h2>Driver Details</h2> 
+
+<hr/>
+<tr *ngFor="let approvelHisytory of approvelHisytorys">
+    <td>{{approvelHisytory.approvalhistoryid}}</td>
+    <td>{{approvelHisytory.requestnumber}}</td><td>{{approvelHisytory.requestmasterid}}</td><br>
+  </tr>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Employee List</button><br>

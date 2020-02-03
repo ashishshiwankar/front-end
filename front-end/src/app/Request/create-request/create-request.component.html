@@ -1,0 +1,169 @@
+<p>
+  create-request works!
+</p>
+
+<app-header></app-header>
+<header><h3>create Request</h3></header>
+
+
+<body>
+
+  <nav  class="navbar navbar-inverse">
+    <div class="container-fluid">
+  
+
+<div [hidden]="submitted" style="width: 400px;">
+
+  <form (ngSubmit)="registerDriver()">
+
+    
+    <div class="form-group ">
+      <label for="name">First requestnumber</label>
+      <input type="text" class="form-control" id="requestnumber" required [(ngModel)]="requestMst.requestnumber" name="requestnumber">
+    </div>
+
+    <div class="form-group">
+      <label for="name">customername</label>
+      <input type="text" class="form-control" id="customername" required [(ngModel)]="requestMst.customername" name="customername">
+    </div>
+
+
+
+    <div class="form-group" >
+      <label for="name">pickupaddress</label>
+      <input type="text" class="form-control"  id="pickupaddress" required [(ngModel)]="requestMst.pickupaddress" name="pickupaddress">
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="subcatid" class="a1">subcatid</label>
+      <div class="col-sm-25">
+              <select class="form-control" id="subcatid"  required [(ngModel)]="requestMst.subcatid" name="subcatid">
+                
+                <option value="1">subcat1</option>
+                <option value="2">subcat2</option>
+                <option value="3">subcat3</option>
+              </select>
+            
+    </div>
+   </div>
+
+  
+
+    <div class="form-group">
+      <label for="catsubcategory" class="a1">catsubcategory</label>
+      <div class="col-sm-25">
+              <select class="form-control" id="catsubcategory"  required [(ngModel)]="requestMst.catsubcategory" name="catsubcategory">
+                <option value="1">catsubcategory1</option>
+                <option value="2">catsubcategory1</option>
+                <option value="3">catsubcategory1</option>
+              </select>
+            
+    </div>
+   </div>
+
+
+   <div class="form-group">
+    <label for="name">catid</label>
+    <input type="text" class="form-control" id="catid" required [(ngModel)]="requestMst.catid" name="catid">
+  </div>
+    
+
+    <div class="form-group">
+      <label for="name">departmentid</label>
+      <input type="text" class="form-control" id="departmentid" required [(ngModel)]="requestMst.departmentid" name="departmentid">
+    </div>
+    
+    <div class="form-group">
+      <label for="name">approxweighte</label>
+      <input type="text" class="form-control" id="approxweight" required [(ngModel)]="requestMst.approxweight" name="approxweight">
+    </div>
+
+
+
+    
+    <div class="form-group">
+      <label for="typeofwaste" class="a1">typeofwaste</label>
+      <div class="col-sm-25">
+              <select class="form-control" id="typeofwaste"  required [(ngModel)]="requestMst.typeofwaste" name="typeofwaste">
+                <option value="1">dry</option>
+                <option value="2">ola</option>
+              </select>
+            
+    </div>
+   </div>
+
+    <div class="form-group">
+      <label for="name">amount</label>
+      <input type="text" class="form-control" id="amount" required [(ngModel)]="requestMst.amount" name="amount">
+    </div>
+    <div class="form-group">
+      <label for="name">lat</label>
+      <input type="text" class="form-control" id="lat" required [(ngModel)]="requestMst.lat" name="liclatence">
+    </div>
+    <div class="form-group">
+      <label for="name">longi</label>
+      <input type="text" class="form-control" id="longi" required [(ngModel)]="requestMst.longi" name="longi">
+    </div>
+
+
+
+    
+    <div class="form-group">
+      <label for="reqtype" class="a1">reqtype</label>
+      <div class="col-sm-25">
+              <select class="form-control" id="reqtype"  required [(ngModel)]="requestMst.reqtype" name="reqtype">
+                <option value="1">type1</option>
+                <option value="2">type2</option>
+                <option value="3">ttpe3</option>
+              
+              </select>
+            
+    </div>
+   </div>
+
+  
+    <div class="form-group">
+      <label for="zoneid" class="a1">zoneid</label>
+      <div class="col-sm-25">
+              <select class="form-control" id="zoneid"  required [(ngModel)]="requestMst.zoneid" name="zoneid">
+                <option value="1">zone1</option>
+                <option value="2">zone2</option>
+                <option value="3">zone3</option>
+                <option value="4">zone4</option>
+                <option value="1">zone5</option>
+                <option value="2">zone6</option>
+                <option value="3">zone7</option>
+                <option value="4">zone8</option>
+              </select>
+            
+    </div>
+   </div>
+
+
+
+
+    <div class="form-group">
+      <label for="name">distance</label>
+      <input type="text" class="form-control" id="distance" required [(ngModel)]="requestMst.distance" name="distance">
+    </div>
+    
+    
+
+
+ 
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+
+</div>
+</div>
+</nav>
+
+<div [hidden]="!submitted">
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+ </body>

@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+
+
+
+<app-header></app-header>
+<header><h3>Add UserGroup</h3></header>
+
+
+<body>
+
+  <nav  class="navbar navbar-inverse">
+    <div class="container-fluid">
+  
+
+<div [hidden]="submitted" style="width: 400px;">
+
+  <form (ngSubmit)="registerGroup()">
+
+    
+    <div class="form-group ">
+      <label for="name">userGroupName</label>
+      <input type="text" class="form-control" id="userGroupName" required [(ngModel)]="group.userGroupName" name="userGroupName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">userGroupDesc</label>
+      <input type="text" class="form-control" id="userGroupDesc" required [(ngModel)]="group.userGroupDesc" name="userGroupDesc">
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+
+</div>
+</div>
+</nav>
+
+<div [hidden]="!submitted">
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+
+ </body>

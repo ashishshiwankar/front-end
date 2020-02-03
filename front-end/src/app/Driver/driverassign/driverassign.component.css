@@ -1,0 +1,30 @@
+header{
+    background-color: skyblue;
+   
+}
+body{
+    background-color: rebeccapurple;
+  
+    color: salmon;
+}
+.form-horizontal shadow p-3 mb-5 bg-white rounded{
+    padding-top: 10cm;
+}
+.col-6{
+    color: slategray;
+    columns: 3;
+    
+    column-rule-style: hidden;
+}
+.form-control{
+    color: springgreen;
+}
+.row{
+
+    color: teal;
+    background: rgb(92, 173, 92);
+}
+
+.a1{
+    color: mediumblue;
+}

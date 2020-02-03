@@ -1,0 +1,74 @@
+
+<app-header></app-header>
+<header><h3>Creata Users</h3></header>
+
+
+<body>
+
+  <nav  class="navbar navbar-inverse">
+    <div class="container-fluid">
+  
+
+<div [hidden]="submitted" style="width: 400px;">
+
+  <form (ngSubmit)="registerUserMst()">
+
+    
+    <div class="form-group ">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="userfirstname" required [(ngModel)]="userMst.userfirstname" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="userlastname" required [(ngModel)]="userMst.userlastname" name="lastName">
+    </div>
+
+
+
+    <div class="form-group" >
+      <label for="name">Email</label>
+      <input type="text" class="form-control"  id="useremail" required [(ngModel)]="userMst.useremail" name="useremail">
+    </div>
+
+
+    <div class="form-group">
+      <label for="name">password</label>
+      <input type="text" class="form-control" id="userpassword" required [(ngModel)]="userMst.userpassword" name="userpassword">
+    </div>
+
+    
+
+    <div class="form-group">
+      <label for="usergroupid" class="a1">subcatid</label>
+      <div class="col-sm-25">
+              <select class="form-control" id="usergroupid"  required [(ngModel)]="userMst.usergroupid" name="usergroupid">
+                <option value="">select group</option>
+                <option value="22">ssn-usergroup</option>
+                <option value="23">pcmc-usergroup</option>
+                <option value="00">other's</option>
+              </select>
+            
+    </div>
+   </div>
+
+
+    <div class="form-group">
+      <label for="name">contact</label>
+      <input type="text" class="form-control" id="mobileno" required [(ngModel)]="userMst.mobileno" name="mobileno">
+    </div>
+
+  
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+
+</div>
+</div>
+</nav>
+
+<div [hidden]="!submitted">
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+ </body>

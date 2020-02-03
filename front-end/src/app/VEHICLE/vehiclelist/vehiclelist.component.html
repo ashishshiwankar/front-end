@@ -1,0 +1,66 @@
+
+
+<app-header></app-header>
+<header>
+  <div class="panel-heading">
+   <h2>vehicle List</h2>
+</div>
+
+<nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+      <li class="badge badge-info" ><a>Email : -</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><button   routerLink="/addVehicle" class="dropdown"> Add Vehicle's </button></li>
+    </ul>
+  </div>
+</nav>
+<div>
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    
+
+</div>
+</header>
+
+<body>
+<div class="panel panel-primary">
+  
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>vehicleno </th>
+          <th>vehicletypeid</th>
+          <th>vehiclemodel</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehicle of vehicles | async">
+          <td>{{vehicle.vehicletypeid}}</td>
+          <td>{{vehicle.vehicleno}}</td>
+          <td>{{vehicle.vehiclemodel}}</td>
+          <td><button (click)="vihcileDetails(vehicle.vehicleid)" class="a1">Edit</button>
+              <button (click)="deleteDriver(vehicle.vehicleid)" class="a1">Delete</button>
+              <button (click)="updateme(vehicle.vehicleid)" class="a1">Assign</button>
+              <button>  <a  routerLink="/assing" class="c1">assignpage</a> </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>

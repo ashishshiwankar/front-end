@@ -1,0 +1,30 @@
+.btnbtn-info{
+    color: rgb(133, 255, 122);
+    margin-left: 10em
+
+}
+
+body{
+    color: rgb(126, 104, 64);
+    background-color: thistle;
+}
+header{
+    color: orchid;
+    column-gap: 100ex;
+    background-color:transparent
+}
+
+
+.a1{
+color: tomato;
+margin-left: 10mm;
+}
+.b1{
+color:lightgray;
+margin-left: 10mm;
+}
+.c1{
+    color: lime;
+    margin-left: 10mm;
+
+}

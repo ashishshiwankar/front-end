@@ -1,0 +1,56 @@
+
+<header>
+  <h3>
+          Asssign Driver
+  </h3>
+</header>
+<body>
+
+
+<div class="container">
+  <br>
+  <form class="form-horizontal shadow p-3 mb-5 bg-white rounded" #f="ngForm"
+          (ngSubmit)="onSubmit()">
+          <div class="row">
+      
+                  <div class="col-6">
+                         
+
+
+
+                        
+
+    <div class="form-group">
+           <label for="name" class="a1">requestnumber</label>
+          <input type="text" class="form-control" id="requestnumber" required [(ngModel)]="approvelHisytory.requestnumber" name="requestnumber">
+  </div>
+
+  <div class="form-group">
+   <label for="name" class="a1">pcmc-supervisor</label>
+     <input type="text" class="form-control" id="pcmcsupervisorid" required [(ngModel)]="approvelHisytory.pcmcsupervisorid" name="pcmcsupervisorid">
+ </div>
+
+ 
+
+ <div class="form-group">
+        <label for="name" class="a1">pcmc-supervisorid</label>
+  
+  <select class="form-control custom-select"  id="pcmcsupervisorid" required [(ngModel)]="approvelHisytory.pcmcsupervisorid" name="pcmcsupervisorid">
+    <option value="" selected>select</option>
+    <option *ngFor="let userMst of userMsts" value="{{userMst.userid}}">{{userMst.userlastname}}</option>
+  </select>
+</div>
+
+                        
+                       
+                  </div>
+              
+          </div>
+          <div class="row">
+                  <div class="col-6">
+                          <input type="submit" class=" btn btn-secondary" value="Assign">
+                  </div>
+          </div>
+  </form>
+</div>
+</body>
