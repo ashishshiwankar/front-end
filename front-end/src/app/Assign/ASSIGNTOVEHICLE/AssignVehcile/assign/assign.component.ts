@@ -81,7 +81,7 @@ export class AssignComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['backtopcmc']);
+    this.router.navigate(['AssignVehcile']);
   }
 
 

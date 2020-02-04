@@ -31,10 +31,9 @@ export class AssignRequestToVehcileComponent implements OnInit {
 
 
   reloadData() {
-    //this.requestMsts = this.requestService.getRequestList();
-    //this.userMsts = this.approvelService.getUserSuperPCMCVList();
+
     this.approvelHisytorys = this.approvelService.getApprovelFinalList();
-    
+
   }
 
   ngOnInit() {

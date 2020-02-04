@@ -1,7 +1,7 @@
 export class UserMst {
     userid: string;
-    userfirstname = '';
-    userlastname ='';
+    userfirstname:string;
+    userlastname:string;
     useremail='';
     userpassword='';
     deptid='';

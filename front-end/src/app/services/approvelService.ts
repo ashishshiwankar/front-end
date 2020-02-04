@@ -123,4 +123,11 @@ getVehicleList(): Observable<any> {
 updateAssigntoVehcile(approvalhistoryid: number, value: any): Observable<Object> {
   return this.http.put(`${this.baseUrl+'/approvel/assignRequestToVeh'}/${approvalhistoryid}`, value);
 }
+
+
+public validateUserZone1(useremail:String):Observable<any>{
+  return  this.httpClient.get(this.baseUrl+"/approvel/datazoneoff?useremail="+useremail);
+
+}
+
 }

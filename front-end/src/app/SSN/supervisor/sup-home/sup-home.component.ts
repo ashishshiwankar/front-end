@@ -48,10 +48,20 @@ export class SupHomeComponent implements OnInit {
   updateDetails(id: number){
     this.router.navigate(['updateDetail', id]);
   }
-//pcmc
+
   approvelDetailspcmc(useremail: String){
     this.router.navigate(['supRequestpcmc', useremail]);
   }
+
+
+  DriverRequest(useremail: String){
+    this.router.navigate(['driverreq', useremail]);
+  }
+
+  ZoneRequest(useremail: String){
+    this.router.navigate(['zoineRequest', useremail]);
+  }
+
 
 }
 

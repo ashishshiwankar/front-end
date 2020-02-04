@@ -1,0 +1,73 @@
+
+<header>
+  <h3 class=a1>
+        Zone Updating
+  </h3>
+</header>
+<body>
+
+  <div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li> <a  routerLink="/mappingsupdate" class="dropdown">Update Mapping</a></li>
+ </ul>
+  </div>
+
+<div class="container">
+  <br>
+  <form class="form-horizontal shadow p-3 mb-5 bg-white rounded" #f="ngForm"
+          (ngSubmit)="onSubmit()">
+          <div class="row">
+      
+                  <div class="col-6">
+                         
+
+
+                 
+                        
+                    
+
+ 
+
+ <div class="form-group">
+        <label for="name" class="a1">ZoneOfficer</label>
+  
+  <select class="form-control custom-select"  id="pcmcuserid" required [(ngModel)]="zoneAssign.pcmcuserid" name="pcmcuserid">
+    <option value="" selected>select</option>
+    <option *ngFor="let zoneAssign of zoneAssigns" value="{{zoneAssign.pcmcuserid}}">{{zoneAssign.pcmcuserid}} </option>
+  </select>
+</div>
+
+        
+<div class="form-group">
+  <label for="name" class="a1">ZoneNumber</label>
+
+<select class="form-control custom-select"  id="zone" required [(ngModel)]="zoneAssign.zone" name="zone">
+<option value="" selected>select</option>
+<option *ngFor="let zoneAssign of zoneAssigns" value="{{zoneAssign.zone}}">{{zoneAssign.zone}} {{zoneAssign.zone}}</option>
+</select>
+</div>
+
+
+
+<div class="form-group">
+  <label for="name" class="a1">address</label>
+
+<select class="form-control custom-select"  id="address" required [(ngModel)]="zoneAssign.address" name="address">
+<option value="" selected>select</option>
+<option *ngFor="let zoneAssign of zoneAssigns" value="{{zoneAssign.address}}">{{zoneAssign.address}}</option>
+</select>
+</div>
+
+                       
+                  </div>
+              
+          </div>
+          <div class="row">
+                  <div class="col-6">
+                          <input type="submit" class=" btn btn-secondary" value="Assign">
+                  </div>
+          </div>
+  </form>
+</div>
+</body>

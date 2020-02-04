@@ -2,9 +2,9 @@
 <app-header></app-header>
 <header>
   <div class="panel-heading">
-   <h2>Request List for PCMC Supervisor</h2>
+   <h2>Request List's</h2>
 </div>
- 
+
 <nav  class="navbar navbar-inverse">
   <div class="container-fluid">
 
@@ -12,7 +12,7 @@
       <li class="badge badge-info" ><a>Email :-</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><button   routerLink="/req" class="dropdown"> HII </button></li>
+      <li><button   routerLink="/req" class="dropdown"> JII </button></li>
     </ul>
   </div>
 </nav>
@@ -45,26 +45,28 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Appro No</th>
+          <th>Approvel Id</th>
+          <th>Req Id</th>
           <th>Req No</th>
-          <th>pickupaddress</th>
-          <th>approxweight</th>
-          <th>Supervisor </th>
+          <th>createdon</th>
+          <th>approvaldate</th>
+          <th>status</th>
+          <th>approval Status</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let approvelHisytory of approvelHisytorys | async">
-          <td>{{approvelHisytory.approvalhistoryid}}</td>
-          <td>{{approvelHisytory.requestnumber}}</td>
-          <td>{{approvelHisytory.requestdate}}</td>
-          <td>{{approvelHisytory.remark}}</td>
-         
-        
-          <td><button (click)="deleteDriver(approvelHisytory.approvalhistoryid)" class="a1">Delete</button>
-              <button (click)="driverDetails(approvelHisytory.approvalhistoryid)" class="b1">Details</button>
-              <button (click)="AssisnToVEhcile(approvelHisytory.approvalhistoryid)" class="a1">Assign</button>
-          
+      <tr *ngFor="let approvelHisytory of approvelHisytories">
+        <td>{{approvelHisytory.approvalhistoryid}}</td>
+        <td>{{approvelHisytory.requestmasterid}}</td>
+        <td>{{approvelHisytory.requestnumber}}</td>
+        <td>{{approvelHisytory.createdon}}</td>
+        <td>{{approvelHisytory.approvaldate}}</td>
+        <td>{{approvelHisytory.status}}</td>
+        <td>{{approvelHisytory.approvalstatus}}</td>
+          <td><button (click)="deleteDriver(approvelHisytory.requestmasterid)" class="a1">Delete</button>
+              <button (click)="driverDetails(approvelHisytory.requestmasterid)" class="b1">Details</button>
+              <button (click)="start(approvelHisytory.requestmasterid,approvelHisytory.requestnumber)" class="c1">START</button>
               
           </td>
         </tr>

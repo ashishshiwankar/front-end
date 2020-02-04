@@ -29,19 +29,32 @@
       <div class="col-md-7 align-self-center text-right">
         <div class="d-flex justify-content-end align-items-center">
           <ol class="breadcrumb">
-            <button (click)="approvelDetails(approvelHisytory.supervisorid)" class="c1">Update</button>
+
             <button  class="breadcrumb-item active"><a class="" (click)="approvelDetails(currentUser.email)">Dashboard</a></button>
             <td>
-              <button (click)="driverDetails(driver.id)" class="b1">Details {{ currentUser.email }}</button>
+
               <button (click)="approvelDetails(currentUser.email)" class="c1">UpdateForssn</button>
              
           </td>
 
           <td>
-            <button (click)="driverDetails(driver.id)" class="b1">Details {{ currentUser.email }}</button>
+
             <button (click)="approvelDetailspcmc(currentUser.email)" class="c1">UpdateForpcmc</button>
           
         </td>
+
+            <td>
+
+              <button (click)="DriverRequest(currentUser.email)" class="c1">ForDriver</button>
+
+            </td>
+
+
+            <td>
+
+              <button (click)="ZoneRequest(currentUser.email)" class="c1">FORZONE</button>
+
+            </td>
 
           </ol>
         </div>

@@ -1,7 +1,7 @@
 export class Zone {
     id: string;
-    zoneNo:'';
-    zonename = '';
+    zoneNo: string;
+    zonename:string;
 
   }
   

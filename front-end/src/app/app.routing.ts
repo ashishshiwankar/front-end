@@ -37,6 +37,10 @@ import { PcmcHomeComponent } from './PCMC/pcmc/pcmc-home/pcmc-home.component';
 import { IncomingRequestComponent } from './PCMC/pcmc/incoming-request/incoming-request.component';
 import { AssignRequestToVehcileComponent } from './Assign/ASSIGNTOVEHICLE/AssignVehcile/assign/assign-request-to-vehcile/assign-request-to-vehcile.component';
 import { AssignComponent } from './Assign/ASSIGNTOVEHICLE/AssignVehcile/assign/assign.component';
+import {DriverRequestComponent} from './driver-request/driver-request.component';
+import { ZoneMappingComponent } from './Zone/zone-mapping/zone-mapping.component';
+import { ZoneUpdatingComponent } from './Zone/zone-updating/zone-updating.component';
+import { ZoreOfficerRequestComponent } from './zore-officer-request/zore-officer-request.component';
 
 
 const appRoutes: Routes = [
@@ -85,8 +89,14 @@ const appRoutes: Routes = [
   { path: 'AssignVehcile', component:AssignRequestToVehcileComponent },
   { path: 'tovechile/:approvalhistoryid', component:AssignComponent },
 
- 
+  { path: 'driverreq/:useremail', component:DriverRequestComponent },
+  { path: 'mappings', component:ZoneMappingComponent },
+
+  { path: 'mappingsupdate', component:ZoneUpdatingComponent },
   
+  { path: 'zoineRequest/:useremail', component:ZoreOfficerRequestComponent },
+  
+
  
   // otherwise redirect to profiles
   { path: '**', redirectTo: '/not-found' }

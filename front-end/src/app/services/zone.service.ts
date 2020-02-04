@@ -6,6 +6,7 @@ import {AppComponent} from '../app.component';
 import { Observable } from 'rxjs';
 import { Vehicle } from '../model/model.vehicle';
 import { Zone } from '../model/model.zone';
+import { ZoneAssign } from '../model/ZoneAssign';
 
 @Injectable()
 export class ZoneService {
@@ -27,4 +28,21 @@ export class ZoneService {
   getZoneList(): Observable<any> {
     return this.http.get(`${this.baseUrl+'/api/zonelist'}`);
   }
+
+
+  getZoneOfferList(): Observable<any> {
+    return this.http.get(`${this.baseUrl+'/apizone/listzoneusers'}`);
+  }
+
+  creatmapping(zoneAssign: ZoneAssign) {
+    return this.http.post(AppComponent.API_URL + '/apizone/zoneassign', zoneAssign);
+  }
+
+
+  
+  getzoneAssignList(): Observable<any> {
+    return this.http.get(`${this.baseUrl+'/apizone/assignList'}`);
+  }
+
+  
 }

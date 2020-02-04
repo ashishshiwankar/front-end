@@ -64,6 +64,10 @@ import { CustomerService } from './services/customer.service';
 import { AuthService1 } from './services/AuthService1';
 import { UserService1 } from './services/userserice';
 import { ApprovelService } from './services/approvelService';
+import { ZoreOfficerRequestComponent } from './zore-officer-request/zore-officer-request.component';
+import { DriverRequestComponent } from './driver-request/driver-request.component';
+import { ZoneMappingComponent } from './Zone/zone-mapping/zone-mapping.component';
+import { ZoneUpdatingComponent } from './Zone/zone-updating/zone-updating.component';
 
 
 @NgModule({
@@ -108,7 +112,11 @@ import { ApprovelService } from './services/approvelService';
      PcmcHomeComponent,
       IncomingRequestComponent,
        AssignRequestToVehcileComponent,
-        AssignComponent 
+        AssignComponent,
+        ZoreOfficerRequestComponent,
+        DriverRequestComponent,
+        ZoneMappingComponent,
+        ZoneUpdatingComponent 
     
   ],
   imports: [
